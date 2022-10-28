@@ -20,3 +20,18 @@
  export class InventoryComponent implements OnInit {
    inventory: Product[] = [];
    constructor(private productService: ProductService) { }
+
+   /**
+   * Initialization of this comopnent
+   */
+  ngOnInit(): void {
+    this.getInventory();
+  }
+
+  /**
+   * Retrieves the inventory and saves it in order to be displayed
+   */
+  getInventory(): void {
+    this.productService.getProducts()
+      .subscribe(inventory => this.inventory = inventory);
+  }
