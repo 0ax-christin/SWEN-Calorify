@@ -12,6 +12,7 @@
  import { ProductService } from '../product.service';
 
  @Component({
+
    selector: 'app-inventory',
    templateUrl: './inventory.component.html',
    styleUrls: ['./inventory.component.css']
