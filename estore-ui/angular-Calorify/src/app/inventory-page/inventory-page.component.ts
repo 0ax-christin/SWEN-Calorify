@@ -19,5 +19,4 @@
  })
  export class InventoryComponent implements OnInit {
    inventory: Product[] = [];
-
    constructor(private productService: ProductService) { }
