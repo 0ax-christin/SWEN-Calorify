@@ -35,3 +35,12 @@
     this.productService.getProducts()
       .subscribe(inventory => this.inventory = inventory);
   }
+  /**
+     * Gets called by a button from html to remove product
+     *
+     * @param product The product to be deleted.
+     */
+   deleteProduct(product: Product): void {
+    this.inventory = this.inventory.filter(p => p !== product);
+    this.productService.deleteProduct(product.id).subscribe();
+  }
