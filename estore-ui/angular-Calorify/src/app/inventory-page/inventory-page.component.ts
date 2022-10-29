@@ -44,3 +44,17 @@
     this.inventory = this.inventory.filter(p => p !== product);
     this.productService.deleteProduct(product.id).subscribe();
   }
+  /**
+     * Gets called by a button from html to add a new product
+     *
+     * @param product The name of the new product.
+    */
+   addProduct(name: String): void {
+
+    name = name.trim();
+    if (!name) { return; }
+    this.productService.addProduct({ name } as Product).subscribe(product => {
+      this.inventory.push(product);
+    });
+  }
+}
