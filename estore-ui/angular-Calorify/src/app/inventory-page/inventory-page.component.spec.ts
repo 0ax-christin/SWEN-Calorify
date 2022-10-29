@@ -12,3 +12,14 @@ describe('InventoryComponent', () => {
     })
     .compileComponents();
   });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(InventoryComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
