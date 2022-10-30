@@ -32,4 +32,5 @@ margin-bottom: 1px;
   row-gap: 50px;
   background-color: rgb(0, 0, 0);
   color: #444;
-  align-items:
+  align-items: center;
+}
